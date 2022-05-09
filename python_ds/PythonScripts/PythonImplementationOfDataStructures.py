@@ -83,30 +83,10 @@ class LinkedList:
         for e in contents:
             self.append(LinkedList.__Node(e))
         
-
-
-# In[3]:
-
-
 ll = LinkedList([3,4,5,6,7,8])
-
-
-# In[4]:
-
-
 print(ll)
-
-
-# In[5]:
-
-
 for i in ll:
     print(i)
-
-
-# In[26]:
-
-
 class Letra:
     def __init__(self, char):
         self.value = char
@@ -120,36 +100,9 @@ class Letra:
     
     def __gt__(self, other):
         return self.value > other.value
-    
-
-
-# In[27]:
-
 
 miletra = Letra("a")
-
-
-# In[32]:
-
-
 listaLetras = [Letra(l) for l in "hola"]
 print(listaLetras)
-
-
-# In[30]:
-
-
 listaLetras.sort()
-
-
-# In[31]:
-
-
 print(listaLetras)
-
-
-# In[ ]:
-
-
-
-

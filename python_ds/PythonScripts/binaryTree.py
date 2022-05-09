@@ -1,11 +1,7 @@
-#!/usr/bin/env python
 # coding: utf-8
 
 # # Binary Tree Implementation
 # ### Author: Jorge A Esguerra A (LimitBreaker98)
-
-# In[2]:
-
 
 from collections import deque
 
@@ -87,7 +83,6 @@ class BinaryTree:
                 preOrderHelper(curr.left)
             if (curr.right): 
                 preOrderHelper(curr.right)
-        
     
         preOrderHelper(self.head)
         return l
@@ -149,13 +144,6 @@ class BinaryTree:
                 if (curr.right):
                     myQueue.append(curr.right)
         return l
-    
-    
-
-
-# In[3]:
-
-
 '''
     Testing:
     
@@ -185,33 +173,7 @@ testTree.insert('G')
 testTree.insert('I')
 testTree.insert('H')
 
-
-# In[4]:
-
-
 print([node.val for node in testTree.preOrder()])
-
-
-# In[152]:
-
-
 print([node.val for node in testTree.postOrder()])
-
-
-# In[153]:
-
-
 print([node.val for node in testTree.inOrder()])
-
-
-# In[154]:
-
-
 print(testTree.BFS())
-
-
-# In[ ]:
-
-
-
-

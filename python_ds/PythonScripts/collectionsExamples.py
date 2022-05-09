@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # coding: utf-8
 
 # ## Examples using the collections built in library:
@@ -6,9 +5,6 @@
 # ### Contents:
 # 
 # #### 1. deque
-
-# In[101]:
-
 
 ## Implement an efficient way to calculate the moving average of a stream of data. 
 ## the number of elements in the moving average is given
@@ -32,12 +28,6 @@ class MovingAverage:
         self.window.append(val) ## since fixed size, it pops from left if full but IT DOESNT RETURN IT
         self.sum += val
         return self.sum / len(self.window)
-        
-
-
-# In[151]:
-
-
 
 def BFS(rooms: List[List[int]], queue) -> None:
     INF = int(1 << 31) - 1
@@ -95,10 +85,6 @@ def wallsAndGates(rooms: List[List[int]]) -> None:
     for row in rooms:
         print(row)
 
-
-# In[152]:
-
-
 INF = int(1 << 31) - 1
 mat = [
     [INF , -1,  0,  INF],
@@ -107,21 +93,7 @@ mat = [
       [0,  -1, INF, INF],
 ]
 
-
-# In[153]:
-
-
 wallsAndGates(mat)
-
-
-# In[ ]:
-
-
-
-
-
-# In[1]:
-
 
 import math
 listita = [1,2,3]
@@ -134,21 +106,4 @@ for i in range(3):
     listaGrande.append(listita)
     print(listaGrande)
 
-
-# In[2]:
-
-
 print(listaGrande)
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-

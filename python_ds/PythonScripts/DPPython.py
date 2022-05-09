@@ -1,17 +1,8 @@
-#!/usr/bin/env python
 # coding: utf-8
 
-# #### A section where solutions to DP are presented in python
-
-# In[1]:
-
-
+##### A section where solutions to DP are presented in python
 ### Longest Palindromic substring
 # Given s, a string, determine the longest palindromic substring inside it.
-
-
-# In[2]:
-
 
 ## V1, DP O(n^2) time, O(n^2) space where n = len(s)
 ## Veredict: Accepted
@@ -43,9 +34,6 @@ def longestPalindrome(s: str) -> str:
     return s[posStart:posEnd+1]
 
 
-# In[11]:
-
-
 ## Improving space to O(n)
 ## Realize you can iterate from end to beginning starting points, and only have an array for the next level answer
 ## Draw arrows in the DP matrix to realize the form of the dependency graph
@@ -74,18 +62,8 @@ def longestPalindromeV2(s: str) -> str:
                     posStart, posEnd = r, c
     
     return s[posStart:posEnd + 1]
-    
-    
-
-
-# In[14]:
-
 
 longestPalindromeV2("babab")
-
-
-# In[46]:
-
 
 #Longest palindromic subsequence
 
@@ -117,18 +95,7 @@ def longestPalindromeSubseq(s: str) -> int:
                 ans = max(ans, best[stPos][endPos])
     
     return ans
-    
-        
-
-
-# In[54]:
-
 
 longestPalindromeSubseq("bbbab")
-
-
-# In[ ]:
-
-
 
 

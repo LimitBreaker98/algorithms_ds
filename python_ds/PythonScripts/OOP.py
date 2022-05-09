@@ -1,12 +1,10 @@
-#!/usr/bin/env python
 # coding: utf-8
 
 # ## Objects in Python
 # 
 # ### Defining classes 
 
-# In[15]:
-
+from collections import deque
 
 """
     A class to model furniture. This will be the base clase from which diverse objects will inherit from.
@@ -65,19 +63,7 @@ class Furniture:
     def count_new_item(cls):
         cls.num_of_created_items += 1
     
-        
-    
-    
-
-
-# In[18]:
-
-
 generic_furniture = Furniture(0, None, None)
-
-
-# In[19]:
-
 
 print(generic_furniture)
 
@@ -85,9 +71,6 @@ print(generic_furniture)
 # ### Inheritance
 # 
 # #### Specific subtypes of furniture can inherit from the base class Furniture.
-
-# In[20]:
-
 
 ## Chair is a class which inherits from Furniture
 class Chair(Furniture):
@@ -102,64 +85,20 @@ class Chair(Furniture):
     def get_details(self):
         return f"Rigidness: {self.rigidness}. Number of Legs = {self.num_legs}. Fabric: {self.fabric}"
 
-
-# In[32]:
-
-
 gamer_chair = Chair(200000, "Blue", "Type95 RazerChair", "Chair", 4, "Very Soft", "Wool")
-
-
-# In[33]:
-
 
 print(isinstance(gamer_chair, Chair))
 print(isinstance(gamer_chair, Furniture))
-
-
-# In[34]:
-
-
 print(gamer_chair.get_details())
 print(gamer_chair)
 
 
-# In[2]:
-
-
-from collections import deque
-
-
-# In[3]:
-
 
 x = deque()
-
-
-# In[5]:
-
-
 x.append(1)
-
-
-# In[6]:
-
-
 x.append(2)
-
-
-# In[7]:
-
-
 print(x)
-
-
-# In[9]:
-
-
 x[1]
-
-
-# In[ ]:
 
 
 
