@@ -22,7 +22,7 @@ import math
 
 # O(A) per number -> O(T*A) 
 # in test set 1, T*A = 100 * 1000 = 10e5 < 5*10e8
-# T * A = 100 * 10e10 = 10^12
+# in test set 2 -> T * A = 100 * 10e10 = 10^12
 
 # evaluate if a number is prime is O(sq_root(n))
 # If you have a number n, you can check up to sq_root(n) all its factors and if nothing divides it, it is prime.
@@ -31,24 +31,23 @@ import math
 # I will only try with all numbers up to sq_root(n)
 # And I can get the complement of any number in the same step 
 
-
 def uniqueFactors(n):
     factor_set = {"1", str(n)}
 
-    if n % 2 == 0:
-        factor_set = factor_set | {"2", str(n // 2)}
-
-    for i in range(3, int(math.sqrt(n)) + 1): #O(sq_root(n))
+    for i in range(2, int(math.sqrt(n)) + 1): #O(sq_root(n))
         if n % i == 0:
             factor_set = factor_set | {str(i), str(n // i)}
     return factor_set
 
 
+def isPalindrome(factor):
+    return factor == factor[::-1]
+
 def solve(n, case_num):
     factor_set = uniqueFactors(n)
     ans = 0
     for factor in factor_set:
-        if factor == factor[::-1]:
+        if isPalindrome(factor):
             ans += 1
     print(f"Case #{case_num}: {ans}")
 

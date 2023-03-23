@@ -1,13 +1,13 @@
 import math
 
-def calc_area(r):
+def calc_area_circle(r):
     return r * r * math.pi
 
 def solve(r, a, b, case_num):
     ans = 0
     mult = True
     while r:
-        ans += calc_area(r)
+        ans += calc_area_circle(r)
         if mult:
             r = r * a
         else: 
