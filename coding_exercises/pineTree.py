@@ -119,17 +119,13 @@ def getRowsWithSpacing(allSegments, longestRow):
     return rowsWithSpacing
 
 
-
 def printPineTree(segments, height):
     allSegments = []
     longestRow = -1
-    # ["*", "*", "*"] <-
     for segmentIdx in range(segments):
         currSegment, currLongestRow = getSegment(segmentIdx * 2 + 1, height)
         longestRow = max(currLongestRow, longestRow)
         allSegments.append(currSegment)
-    
-    # [['*'], ["*", "*", "*"]
     
     trunkSegment = getTrunkSegment(longestRow-2)
     allSegments.extend(trunkSegment)
